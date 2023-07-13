@@ -75,12 +75,13 @@
     }
 
     function getEnvironment() {
+    document.getElementById("language").append("เข้า Loop")  
   document.getElementById("OS").append(liff.getOS())
   document.getElementById("language").append(liff.getLanguage())
   document.getElementById("version").append(liff.getVersion())
   document.getElementById("accessToken").append(liff.getAccessToken())
   document.getElementById("OS").append(liff.getUserProfile())   
-  document.getElementById("language").append("เข้า Loop")
+  
   document.getElementById("isInClient").append(liff.isInClient())
     if(liff.isInClient)
    { 
