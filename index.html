@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My LIFF app</title>
   <link rel="stylesheet" href="css/style.css" media="all">
+      <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
   <p id="os"><b>OS:</b> </p>
@@ -44,6 +44,7 @@
 
  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
+    import liff from "@line/liff/core";
     function createUniversalLink() {
     }
 
@@ -103,7 +104,7 @@
          document.getElementById("language").append("เข้า Env")
         getEnvironment()
     })
-      cath((err) => {
+      .cath((err) => {
 console.log(err.code, err.message);
         liff.closeWindow();
       });
