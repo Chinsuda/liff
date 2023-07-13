@@ -99,12 +99,14 @@
         liffId: "2000120563-DZWYdEYG"
       })
       .then(() => {
+         document.getElementById("language").append("เข้า Env")
         getEnvironment()
     })
       cath((err) => {
 console.log(err.code, err.message);
         liff.closeWindow();
       });
+       document.getElementById("language").append("จบ main")
     }
     main()
   </script>
