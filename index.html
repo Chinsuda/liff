@@ -94,12 +94,17 @@
 
     async function main() {
        document.getElementById("language").append("เข้า main")
-      await liff.init({ liffId: "1661100032-Ab3BWnO7" })
-       getEnvironment()
-      // getUserProfile()
-      // getContext()
-      // getFriendship()
-      // createUniversalLink()
+    liff
+      .init({
+        liffId: "1661100032-Ab3BWnO7"
+      })
+      .then(() => {
+        getEnvironment()
+    })
+      cath((err) => {
+console.log(err.code, err.message);
+        liff.closeWindow();
+      });
     }
     main()
   </script>
