@@ -81,7 +81,7 @@ async function main() {
     displayName.innerHTML =
       '<center><b>สวัสดีค่ะ คุณ</b> ' +
       profile.displayName +
-      '</center>' +
+      '</br> Liff ID :'+ profile.userId +' </center>' +
       '</br> ยินดีต้องรับเข้าสู่ระบบ <b>TBS SMART TRAINING</b> </br> กรุณากดปุ่มด้านล่างเพื่อเข้าร่วมการอบรม';
   }
 }
