@@ -75,14 +75,14 @@ async function main() {
   // Try a LIFF function
   async function getUserProfile() {
     const profile = await liff.getProfile();
-    pictureUrl.src = profile.pictureUrl;
+    //pictureUrl.src = profile.pictureUrl;
     //userId.innerHTML = '<b>userId:</b> ' + profile.userId;
     //statusMessage.innerHTML = '<b>statusMessage:</b> ' + profile.statusMessage;
     displayName.innerHTML =
       '<center><b>สวัสดีค่ะ คุณ</b> ' +
       profile.displayName +
       '</br> Liff ID :'+ profile.userId +' </center>' +
-      '</br> ยินดีต้องรับเข้าสู่ระบบ <b>TBS SMART TRAINING</b> </br> กรุณากดปุ่มด้านล่างเพื่อเข้าร่วมการอบรม';
+      ;
   }
 }
 main();
