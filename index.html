@@ -101,11 +101,22 @@
         liffId: "1661100032-Ab3BWnO7"
       })
       .then(() => {
-         document.getElementById("language").append("เข้า Env")
-        const profile = await liff.getProfile()
-        document.getElementById("userId").append(profile.userId)
-        document.getElementById("language").append(profile.userId)
-        getEnvironment()
+       // document.getElementById("language").append("เข้า Env")
+       // const profile = await liff.getProfile()
+       // document.getElementById("userId").append(profile.userId)
+       // document.getElementById("language").append(profile.userId)
+       // getEnvironment()
+
+         if (!liff.isInClient()) {
+          if (liff.isLoggedIn()) {
+            document.getElementById("language").append("Login แล้ว")
+            const profile = await liff.getProfile()
+            document.getElementById("userId").append(profile.userId)
+          } else {
+             document.getElementById("language").append("/ รอ Login")
+           liff.login();
+          }
+         }
     })
       cath((err) => {
 console.log(err.code, err.message);
