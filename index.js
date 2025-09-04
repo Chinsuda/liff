@@ -81,7 +81,7 @@ async function main() {
     displayName.innerHTML =
       '<center><b>สวัสดีค่ะ คุณ</b> ' +
       profile.displayName +
-      '</br> Liff ID :'+ profile.userId +' </center>' +
+      '</br> Liff ID :'+ profile.userId +' </center>'
       ;
   }
 }
