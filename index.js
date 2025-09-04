@@ -34,7 +34,7 @@ async function main() {
           if (liff.isLoggedIn()) {
             btnLogIn.style.display = 'none';
             btnLogOut.style.display = 'block';
-            btnScanCode.style.display = 'block';
+            btnScanCode.style.display = 'none';
             getUserProfile();
           } else {
             if(btnLogIn){
@@ -47,7 +47,7 @@ async function main() {
           }
         } else {
           getUserProfile();
-          btnScanCode.style.display = 'block';
+          btnScanCode.style.display = 'none';
         }
         //if (liff.isInClient() && liff.getOS() === 'android') {
         //  btnScanCode.style.display = 'block';
