@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-<title>LIFF: LINE Front-end Framework</title>
- </head>
-<body id="body">
-  <section id="profile">
-    <img id="pictureUrl" src="https://mokmoon.com/images/ic_liff.png">
-    <p id="userId"></p>
-  <p id="displayName"></p>
-  <p id="statusMessage"></p>
-  <p id="email"></p>
-  </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
 
-  <section id="feature">
-  </section>
+    <title>TBS Smart Training</title>
+    
+    
+  </head>
+  <body id="body">
+    <section id="profile">
+      <img id="pictureUrl" src="https://mokmoon.com/images/ic_liff.png" />
+      <p id="userId"></p>
+      <p id="displayName"></p>
+    <!--   <p id="statusMessage"></p>
+      <p id="email"></p>
+    </section> -->
 
-  <section id="button">
+    <section id="feature">
+      <p id="code"></p>
+    </section>
+
+    <section id="button">
+      <button id="btnScanCode">Scan QR</button>
       <button id="btnLogIn">Log In</button>
       <button id="btnLogOut">Log Out</button>
-  </section>
-</body>
- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    </section>
+  </body>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script src="./index.js"></script>
 </html>
