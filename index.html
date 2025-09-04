@@ -110,13 +110,18 @@
          if (!liff.isInClient()) {
           if (liff.isLoggedIn()) {
             document.getElementById("language").append("Login แล้ว")
-            const profile = await liff.getProfile()
-            document.getElementById("userId").append(profile.userId)
+           // const profile = await liff.getProfile()
+           // document.getElementById("userId").append(profile.userId)
           } else {
              document.getElementById("language").append("/ รอ Login")
            liff.login();
           }
          }
+        else {
+           document.getElementById("language").append("/ !liff.isInClient Else")
+        // const profile = await liff.getProfile()
+         //   document.getElementById("userId").append(profile.userId)
+        }
     })
       cath((err) => {
 console.log(err.code, err.message);
