@@ -102,7 +102,9 @@
       })
       .then(() => {
          document.getElementById("language").append("เข้า Env")
-        getEnvironment()
+        getEnvironment();
+        const profile = await liff.getProfile()
+        document.getElementById("userId").append(profile.userId)
     })
       cath((err) => {
 console.log(err.code, err.message);
