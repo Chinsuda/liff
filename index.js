@@ -80,9 +80,8 @@ async function main() {
     //userId.innerHTML = '<b>userId:</b> ' + profile.userId;
     //statusMessage.innerHTML = '<b>statusMessage:</b> ' + profile.statusMessage;
     displayName.innerHTML =
-      '<b>Line Name:</b> ' +
-      profile.displayName +
-      '</br> <b>Liff ID:</b> ' + profile.userId ;
+      '<b>Line Name:</b> ' + profile.displayName +
+      '</br><b>Liff ID:</b> ' + profile.userId ;
   }
 }
 main();
