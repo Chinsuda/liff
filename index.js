@@ -43,7 +43,7 @@ async function main() {
             if(btnLogOut){            
               btnLogOut.style.display = 'none';
             }
-            
+            btnScanCode.style.display = 'none';
           }
         } else {
           getUserProfile();
