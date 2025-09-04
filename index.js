@@ -76,7 +76,7 @@ async function main() {
   // Try a LIFF function
   async function getUserProfile() {
     const profile = await liff.getProfile();
-    //pictureUrl.src = profile.pictureUrl;
+    pictureUrl.src = profile.pictureUrl;
     //userId.innerHTML = '<b>userId:</b> ' + profile.userId;
     //statusMessage.innerHTML = '<b>statusMessage:</b> ' + profile.statusMessage;
     displayName.innerHTML =
