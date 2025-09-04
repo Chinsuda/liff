@@ -28,7 +28,7 @@ async function main() {
   // Initialize LIFF app)
   await document.addEventListener('DOMContentLoaded', function() {
       liff.init({
-          liffId: '2000259221-jlNmP91Q' })
+          liffId: '1661100032-Ab3BWnO7' })
       .then(() => {
         if (!liff.isInClient()) {
           if (liff.isLoggedIn()) {
