@@ -80,10 +80,9 @@ async function main() {
     //userId.innerHTML = '<b>userId:</b> ' + profile.userId;
     //statusMessage.innerHTML = '<b>statusMessage:</b> ' + profile.statusMessage;
     displayName.innerHTML =
-      '<center><b>สวัสดีค่ะ คุณ</b> ' +
+      '<b>สวัสดีค่ะ คุณ</b> ' +
       profile.displayName +
-      '</br> Liff ID ' + profile.userId + ' </center>'
-      ;
+      '</br> <b>Liff ID:</b> ' + profile.userId ;
   }
 }
 main();
