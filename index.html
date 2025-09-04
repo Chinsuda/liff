@@ -1,137 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF app</title>
-  <link rel="stylesheet" href="css/style.css" media="all">
-</head>
-<body>
-  <p id="os"><b>OS:</b> </p>
-  <p id="language"><b>Language:</b> </p>
-  <p id="version"><b>Version:</b> </p>
-  <p id="isInClient"><b>isInClient:</b> </p>
-  <p id="accessToken"><b>AccessToken:</b> </p>
-  <img id="pictureUrl">
-  <p id="userId"><b>userId:</b> </p>
-  <p id="displayName"><b>displayName:</b> </p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b> </p>
-  <p id="type"><b>type:</b> </p>
-  <p id="viewType"><b>viewType:</b> </p>
-  <p id="utouId"><b>utouId:</b> </p>
-  <p id="roomId"><b>roomId:</b> </p>
-  <p id="groupId"><b>groupId:</b> </p>
-  <p id="friendship"><b>isFriendship:</b> </p>
-  <p id="scanCode"><b>Code:</b> </p>
-  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
-  <p id="universalLink1"><b>Universal Link:</b> </p>
-  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
-  <p><a href="liff/path/?param=9">Link to Path</a></p>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+<title>LIFF: LINE Front-end Framework</title>
+ </head>
+<body id="body">
+  <section id="profile">
+    <img id="pictureUrl" src="https://mokmoon.com/images/ic_liff.png">
+    <p id="userId"></p>
+  <p id="displayName"></p>
+  <p id="statusMessage"></p>
+  <p id="email"></p>
+  </section>
 
-  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-  <button onclick="openWindow()">Open Window</button>
-  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <button id="btnClose" onclick="closed()">Close</button>
+  <section id="feature">
+  </section>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
-  <!-- <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-  </script> -->
-
- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-    function createUniversalLink() {
-    }
-
-    async function shareMsg() {
-    }
-
-    function logOut() {
-    }
-
-    function closed() {
-    }
-
-    async function scanCode() {
-    }
-
-    function openWindow() {
-    }
-
-    async function getFriendship() {
-    }
-
-    async function sendMsg() {
-    }
-
-    function getContext() {
-    }
-
-    async function getUserProfile() {
-    }
-
-    function getEnvironment() {
-    document.getElementById("language").append("เข้า Loop")  
-  document.getElementById("OS").append(liff.getOS())
-  document.getElementById("language").append(liff.getLanguage())
-  document.getElementById("version").append(liff.getVersion())
-  document.getElementById("accessToken").append(liff.getAccessToken())
-  document.getElementById("OS").append(liff.getUserProfile())   
-  
-  document.getElementById("isInClient").append(liff.isInClient())
-    if(liff.isInClient)
-   { 
-     document.getElementById("btnLogOut").style.display="none"
-   }else{
-     document.getElementById("btnMsg").style.display="none"
-     document.getElementById("btnScanCode").style.display="none"
-     document.getElementById("btnClose").style.display="none"
-  }
-    }
-
-    async function main() {
-       document.getElementById("language").append("เข้า main 1")
-    liff
-      .init({
-        //liffId: "2000120563-DZWYdEYG"
-        liffId: "1661100032-Ab3BWnO7"
-      })
-      .then(() => {
-       // document.getElementById("language").append("เข้า Env")
-       // const profile = await liff.getProfile()
-       // document.getElementById("userId").append(profile.userId)
-       // document.getElementById("language").append(profile.userId)
-       // getEnvironment()
-
-         if (!liff.isInClient()) {
-          if (liff.isLoggedIn()) {
-            document.getElementById("language").append("Login แล้ว")
-           // const profile = await liff.getProfile()
-           // document.getElementById("userId").append(profile.userId)
-          } else {
-             document.getElementById("language").append("/ รอ Login")
-           liff.login();
-          }
-         }
-        else {
-           document.getElementById("language").append("/ !liff.isInClient Else")
-        // const profile = await liff.getProfile()
-         //   document.getElementById("userId").append(profile.userId)
-        }
-    })
-      cath((err) => {
-console.log(err.code, err.message);
-        liff.closeWindow();
-      });
-       document.getElementById("language").append("จบ main")
-    }
-    main()
-  </script>
+  <section id="button">
+      <button id="btnLogIn">Log In</button>
+      <button id="btnLogOut">Log Out</button>
+  </section>
 </body>
-   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
- 
+ <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="./index.js"></script>
 </html>
